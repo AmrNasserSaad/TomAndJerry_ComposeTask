@@ -28,7 +28,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.font.FontWeight
@@ -108,7 +107,7 @@ fun JerryWelcomeHeader(
             fontWeight = FontWeight.Medium,
             fontSize = 18.sp,
 
-        )
+            )
         Text(
             text = "Which Tom do you want to buy?",
             fontSize = 16.sp,
@@ -134,7 +133,8 @@ fun NotificationBellWithBadge(count: Int) {
                     color = ColorDark15,
                     shape = RoundedCornerShape(12.dp)
                 )
-                .width(51.dp).height(52.dp),
+                .width(51.dp)
+                .height(52.dp),
             contentAlignment = Alignment.Center
         ) {
             Image(
@@ -149,7 +149,7 @@ fun NotificationBellWithBadge(count: Int) {
                 modifier = Modifier
                     .clip(CircleShape)
                     .background(ColorBlue)
-                    .size(16.dp)
+                    .size(18.dp)
                     .align(Alignment.TopEnd),
                 contentAlignment = Alignment.Center
             ) {
@@ -158,10 +158,10 @@ fun NotificationBellWithBadge(count: Int) {
                     color = Color.White,
                     fontFamily = IBMPlexSansArabic,
                     fontWeight = FontWeight.Medium,
-                    fontSize = 10.sp,
+                    fontSize = 12.sp,
                     modifier = Modifier
                         .fillMaxSize()
-                        .offset(y = (-4).dp),
+                        .offset(y = (-3).dp),
                     textAlign = TextAlign.Center
                 )
             }
@@ -226,9 +226,8 @@ fun PromotionBannerSection(
         contentAlignment = Alignment.CenterStart
     ) {
         Image(
-            painter = painterResource(R.drawable.promotion_banner_img),
+            painter = painterResource(R.drawable.vanneefeer),
             contentDescription = "",
-         //   contentScale = ContentScale.FillHeight,
             modifier = Modifier.fillMaxSize()
         )
         Column(
@@ -249,7 +248,7 @@ fun PromotionBannerSection(
                 fontSize = 16.sp,
                 fontFamily = IBMPlexSansArabic,
                 fontWeight = FontWeight.Normal,
-                color = ColorTextDescription,
+                color = Color(0xCCFFFFFF),
                 modifier = Modifier.padding(top = 8.dp)
             )
         }
@@ -396,12 +395,12 @@ fun CheapTomCard1(name: String, description: String, promo: Int, cheeseCount: In
                     fontWeight = FontWeight.SemiBold,
                     fontSize = 24.sp,
 
-                )
+                    )
                 Text(
                     text = description,
                     fontSize = 16.sp,
                     fontFamily = IBMPlexSansArabic,
-                    fontWeight = FontWeight.Medium,
+                    fontWeight = FontWeight.Normal,
                     color = ColorTextDescription,
                     modifier = Modifier
                         .fillMaxWidth()
@@ -419,7 +418,9 @@ fun CheapTomCard1(name: String, description: String, promo: Int, cheeseCount: In
             Image(
                 painter = painterResource(img),
                 contentDescription = name,
-                modifier = Modifier.fillMaxSize().align(Alignment.Center)
+                modifier = Modifier
+                    .fillMaxSize()
+                    .align(Alignment.Center)
             )
         }
     }
@@ -528,7 +529,7 @@ fun CheapTomCard(
                     text = description,
                     fontSize = 16.sp,
                     fontFamily = IBMPlexSansArabic,
-                    fontWeight = FontWeight.Medium,
+                    fontWeight = FontWeight.Normal,
                     color = ColorTextDescription,
                     modifier = Modifier
                         .fillMaxWidth()

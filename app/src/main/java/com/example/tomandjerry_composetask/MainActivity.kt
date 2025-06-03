@@ -16,8 +16,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             TomAndJerry_ComposeTaskTheme {
                // JerryStoreScreen()
-              //  TomKitchenScreen()
-                TomAccountScreen()
+                TomKitchenScreen()
+                //TomAccountScreen()
             }
         }
     }
