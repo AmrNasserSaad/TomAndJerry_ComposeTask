@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import com.example.tomandjerry_composetask.screens.JerryStoreScreen
+import com.example.tomandjerry_composetask.screens.TomAccountScreen
 import com.example.tomandjerry_composetask.screens.TomKitchenScreen
 import com.example.tomandjerry_composetask.ui.theme.TomAndJerry_ComposeTaskTheme
 
@@ -15,7 +16,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             TomAndJerry_ComposeTaskTheme {
                // JerryStoreScreen()
-                TomKitchenScreen()
+              //  TomKitchenScreen()
+                TomAccountScreen()
             }
         }
     }

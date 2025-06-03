@@ -58,7 +58,9 @@ fun TomKitchenScreen() {
         }
     ) { _ ->
         Column(
-            modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState())
+            modifier = Modifier
+                .fillMaxSize()
+                .verticalScroll(rememberScrollState())
         ) {
             Box(
                 modifier = Modifier
@@ -70,7 +72,6 @@ fun TomKitchenScreen() {
                 Box(
                     modifier = Modifier
                         .fillMaxSize()
-                    //.height(200.dp)
                 ) {
                     Image(
                         painter = painterResource(R.drawable.tomkitchen),
